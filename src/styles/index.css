@@ -1,0 +1,43 @@
+/* src/styles/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-v4-bg text-v4-text;
+    font-family: "NanumSquareNeo", sans-serif;
+  }
+}
+
+@layer components {
+  /* V4용 커스텀 버튼 */
+  .btn-v4 {
+    @apply px-6 py-3 font-bold text-white bg-v4-blue rounded-lg shadow-lg transition-transform duration-300;
+  }
+  .btn-v4:hover {
+    @apply -translate-y-1 shadow-xl;
+  }
+}
+
+@layer utilities {
+  .max-w-container {
+    @apply max-w-[1200px] mx-auto;
+  }
+
+  /* 커스텀 스크롤바 */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: theme('colors.v4-bg');
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #cbd5e1; /* slate-300 */
+    border-radius: 10px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8; /* slate-400 */
+  }
+}

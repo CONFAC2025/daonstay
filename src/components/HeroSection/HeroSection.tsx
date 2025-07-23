@@ -1,0 +1,40 @@
+const StatCard = ({ label, value, unit }: { label: string; value: string; unit: string; }) => (
+  <div className="bg-v4-surface/80 backdrop-blur-sm p-4 rounded-lg text-center border border-black/10 transition-all duration-300 hover:bg-v4-surface hover:-translate-y-1 shadow-lg hover:shadow-xl">
+    <p className="text-v4-text-muted text-sm md:text-base">{label}</p>
+    <p className="text-v4-gold text-3xl md:text-5xl font-bold">
+      <span>{value}</span>
+      <span className="text-xl md:text-3xl ml-1">{unit}</span>
+    </p>
+  </div>
+);
+
+const HeroSection = () => {
+  return (
+    <section className="relative h-screen w-full overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0">
+        <img src="/images/image-2.jpg" alt="동해 바다와 풀빌라" className="w-full h-full object-cover" />
+        <div className="absolute top-0 left-0 w-full h-full bg-white/30"></div>
+      </div>
+
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 text-v4-text">
+        <h1 className="text-4xl md:text-7xl font-extrabold leading-tight mb-4 drop-shadow-lg animate-fade-in-up-slow">
+          수익으로 증명하는 단 하나의 스테이
+          <span className="text-v4-gold block mt-4">
+            POOL VILLA 다온스테이
+          </span>
+        </h1>
+        <p className="text-base md:text-2xl text-v4-text-muted mb-8 md:mb-12 max-w-prose animate-fade-in-up-slow" style={{ animationDelay: '0.3s' }}>
+          동해 바다 위 프리미엄 풀빌라에서 시작되는 성공적인 투자.
+        </p>
+
+        <div className="grid grid-cols-3 gap-4 md:gap-8 max-w-4xl mx-auto mb-8 md:mb-12 w-full px-4 sm:px-0 animate-fade-in-up-slow" style={{ animationDelay: '0.6s' }}>
+          <StatCard label="예상 연간 순수익" value="5,211" unit="만원" />
+          <StatCard label="예상 투자 수익률" value="33" unit="%" />
+          <StatCard label="예상 실투자금" value="15,800" unit="만원" />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HeroSection;
