@@ -11,15 +11,7 @@ const Header = () => {
           href={`${import.meta.env.VITE_BASE}`}
           aria-label="동해 다온스테이 홈페이지로 이동"
         >
-          <span
-            className="material-symbols-rounded w-[28px] h-[28px] text-v4-gold"
-            aria-label="홈 아이콘"
-            role="img"
-            translate="no"
-          >
-            villa
-          </span>
-          <h1 className="text-[24px] font-bold">
+          <h1 className="text-[19.2px] font-bold">
             <span className="sr-only">홈페이지 제목: </span>
             POOL VILLA 펜션
           </h1>

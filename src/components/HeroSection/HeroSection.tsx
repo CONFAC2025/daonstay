@@ -10,7 +10,7 @@ const StatCard = ({ label, value, unit }: { label: string; value: string; unit: 
     <div className="bg-v4-surface/80 backdrop-blur-sm p-4 rounded-lg text-center border border-white/10 transition-all duration-300 hover:bg-v4-surface hover:-translate-y-1 shadow-lg hover:shadow-xl">
       <p className="text-v4-text-muted text-sm md:text-base">{label}</p>
       <p className="text-v4-gold text-3xl md:text-5xl font-bold font-['Montserrat']">
-        <span ref={valueRef} className="text-4xl md:text-6xl">{animatedValue.toLocaleString()}</span><br />
+        <span ref={valueRef} className="text-3xl md:text-5xl">{animatedValue.toLocaleString()}</span><br />
         <span className="text-xl md:text-3xl ml-1">{unit}</span>
       </p>
     </div>
@@ -38,7 +38,7 @@ const HeroSection = () => {
       </div>
 
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 text-v4-text pt-[60px]">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold leading-tight mb-4 drop-shadow-lg text-black">
+        <h1 className="text-5xl sm:text-6xl md:text-8xl font-extrabold leading-tight mb-4 drop-shadow-lg text-black">
           {animatedTitlePart1_1}<br />
           {animatedTitlePart1_2}<br />
           <span className="text-white">{animatedTitlePart2_1}</span><br />
