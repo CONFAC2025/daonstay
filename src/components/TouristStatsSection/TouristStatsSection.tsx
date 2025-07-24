@@ -39,7 +39,7 @@ const TouristStatsSection = () => {
     <section className="py-16 md:py-24 bg-v4-bg">
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text-muted mb-4">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text-muted mb-4">
             <span className="text-v4-gold">{useTypingEffect("동해시 관광객으로 넘쳐나는", 50)}</span><br />{useTypingEffect("숙박수요를 기대하세요!", 50)}
           </h2>
           <p className="text-lg md:text-xl text-v4-text">

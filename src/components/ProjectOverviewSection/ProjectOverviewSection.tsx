@@ -14,7 +14,7 @@ const ProjectOverviewSection = () => {
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="grid grid-cols-1 gap-12 items-center">
           <div className="text-center">
-            <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text-muted mb-6 whitespace-nowrap">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text-muted mb-6 whitespace-nowrap">
               {useTypingEffect("프로젝트 ", 50)}<span className="text-v4-gold">{useTypingEffect("개요", 50)}</span>
             </h2>
             <p className="text-lg md:text-xl text-v4-text-muted mb-8 animate-typing">

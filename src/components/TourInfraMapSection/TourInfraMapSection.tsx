@@ -142,9 +142,9 @@ const TourInfraMapSection = () => {
 
   return (
     <div className="max-w-container py-8 pc:py-12">
-      <h2 className="text-7xl pc:text-8xl font-extrabold text-v4-text px-4 pc:px-12 mb-6 text-center animate-typing">
-        <span className="text-v4-gold">{useTypingEffect("다온스테이", 50)}</span><br />
-        <span className="text-black text-shadow-lg">{useTypingEffect("주변의 핵심 관광 인프라", 50)}</span>
+      <h2 className="text-5xl pc:text-7xl font-extrabold text-v4-text px-4 pc:px-12 mb-6 text-center animate-typing">
+        <span className="text-v4-gold">{useTypingEffect("다온스테이 주변의", 50)}</span><br />
+        <span className="text-black text-shadow-lg">{useTypingEffect("핵심 관광 인프라", 50)}</span>
       </h2>
       <div className="flex flex-col lg:flex-row gap-6 px-4 pc:px-12">
         <div className="w-full lg:w-3/5 aspect-[390/313] pc:aspect-auto lg:h-[600px] rounded-lg overflow-hidden shadow-lg">

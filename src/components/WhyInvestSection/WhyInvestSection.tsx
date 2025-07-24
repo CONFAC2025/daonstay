@@ -21,7 +21,7 @@ const INVESTMENT_POINTS = [
 const Card = ({ icon, title, description, style }: { icon: string; title: string; description: string; style?: React.CSSProperties }) => (
   <div className="bg-v4-surface p-6 rounded-xl shadow-lg border border-black/10 flex flex-col items-center text-center transition-all duration-300 hover:shadow-xl hover:-translate-y-1 h-full" style={style}>
     <div className="text-v4-gold mb-4 text-5xl">{icon}</div>
-    <h3 className="text-xl font-bold text-v4-text-muted mb-2 animate-typing">{title}</h3>
+    <h3 className="text-3xl font-bold text-v4-gold mb-2 animate-typing">{useTypingEffect(title, 30)}</h3>
     <p className="text-v4-text-muted text-base flex-grow animate-typing">{description}</p>
   </div>
 );
@@ -31,7 +31,7 @@ const WhyInvestSection = () => {
     <section className="py-16 md:py-24 bg-v4-bg">
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text-muted mb-4 animate-typing">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text-muted mb-4 animate-typing">
             {useTypingEffect("동해 ", 50)}<span className="text-v4-gold">{useTypingEffect("다온스테이의", 50)}</span><br />{useTypingEffect("핵심 투자 포인트", 50)}
           </h2>
           <p className="text-lg md:text-xl text-v4-text animate-typing">

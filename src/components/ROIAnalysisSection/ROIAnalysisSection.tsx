@@ -30,7 +30,7 @@ const ROIAnalysisSection = () => {
     <section className="py-16 md:py-24 bg-v4-bg">
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text-muted mb-4">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text-muted mb-4">
             <span className="text-v4-gold">{animatedH2}</span>
           </h2>
           <p className="text-lg md:text-xl text-v4-text-muted">
