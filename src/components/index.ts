@@ -11,6 +11,7 @@ import TourInfraMapSection from "./TourInfraMapSection";
 import TouristStatsSection from "./TouristStatsSection";
 import VideoSection from "./VideoSection";
 import WhyInvestSection from "./WhyInvestSection";
+import CallButton from "./common/CallButton";
 
 export {
   ApplicantListSection,
@@ -26,4 +27,5 @@ export {
   TouristStatsSection,
   VideoSection,
   WhyInvestSection,
+  CallButton,
 };

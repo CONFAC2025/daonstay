@@ -1,6 +1,6 @@
 export const STATS_DATA = [
   {
-    icon: "calendar_month",
+    icon: "👥",
     title: "연간 총 관광객",
     value: 1500,
     unit: "만명 이상",

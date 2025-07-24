@@ -14,6 +14,7 @@ import {
   VideoSection,
   WhyInvestSection,
 } from "./components";
+import CallButton from "./components/common/CallButton";
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => {
         <ProjectOverviewSection />
       </main>
       <Footer />
+      <CallButton />
     </QueryClientProvider>
   );
 };

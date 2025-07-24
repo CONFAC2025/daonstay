@@ -76,14 +76,7 @@ export const MAP_MARKERS = [
     description: "애국가 첫 소절의 배경으로 유명한 촛대바위가 상징인 일출 명소입니다. 기암괴석과 어우러진 해안 절경이 뛰어나 사계절 내내 사진작가와 관광객들에게 사랑받는 곳입니다.",
     image: `/images/tourist-spot/CHUAM_BEACH.jpg`,
   },
-  {
-    id: 10,
-    name: "도깨비다리 스카이밸리",
-    lat: 37.555166,
-    lng: 129.119079,
-    description: "스카이워크, 스카이사이클, 자이언트 슬라이드 등 다양한 체험시설을 통해 동해의 아름다운 풍광을 즐길 수 있는 곳입니다. 도째비골 스카이밸리와 함께 짜릿한 경험을 선사합니다.",
-    image: `/images/tourist-spot/DOKKAEBI_BRIDGE_SKY_VALLEY.jpg`,
-  },
+  
   {
     id: 11,
     name: "옥계해변",

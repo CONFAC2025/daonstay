@@ -1,13 +1,15 @@
+import useTypingEffect from "../../hooks/useTypingEffect.tsx";
+
 const VideoSection = () => {
   return (
     <section className="py-16 md:py-24 bg-v4-surface">
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text mb-4">
-            <span className="text-v4-gold">따라올 수 없는</span> 투자수익을 만나보세요
+          <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text mb-4">
+            <span className="text-v4-gold">{useTypingEffect("따라올 수 없는", 50)}</span>{useTypingEffect(" 투자수익을 만나보세요", 50)}
           </h2>
           <p className="text-lg md:text-xl text-v4-text-muted">
-            다온스테이가 그려나갈 미래를 직접 확인하세요.
+            {useTypingEffect("다온스테이가 그려나갈 미래를 직접 확인하세요.", 30)}
           </p>
         </div>
         <div className="aspect-video max-w-5xl mx-auto rounded-xl overflow-hidden shadow-2xl border-2 border-black/10">

@@ -4,6 +4,7 @@ import {
   GOOGLE_MAPS_API_KEY,
   MAP_MARKERS,
 } from "./constant";
+import useTypingEffect from "../../hooks/useTypingEffect.tsx";
 
 // 타입스크립트를 위한 Window 객체 확장
 declare global {
@@ -141,28 +142,29 @@ const TourInfraMapSection = () => {
 
   return (
     <div className="max-w-container py-8 pc:py-12">
-      <h2 className="text-6xl pc:text-7xl font-extrabold text-v4-text px-4 pc:px-12 mb-6 text-center text-stroke-primary animate-pulse">
-        <span className="text-v4-gold">다온스테이</span> 주변의 핵심 관광 인프라
+      <h2 className="text-7xl pc:text-8xl font-extrabold text-v4-text px-4 pc:px-12 mb-6 text-center animate-typing">
+        <span className="text-v4-gold">{useTypingEffect("다온스테이", 50)}</span><br />
+        <span className="text-black text-shadow-lg">{useTypingEffect("주변의 핵심 관광 인프라", 50)}</span>
       </h2>
       <div className="flex flex-col lg:flex-row gap-6 px-4 pc:px-12">
         <div className="w-full lg:w-3/5 aspect-[390/313] pc:aspect-auto lg:h-[600px] rounded-lg overflow-hidden shadow-lg">
           <div ref={mapRef} style={{ width: '100%', height: '100%' }} />
         </div>
         <div className="w-full lg:w-2/5 bg-v4-bg rounded-lg p-4 lg:max-h-[600px] overflow-y-auto shadow-lg custom-scrollbar">
-          <h3 className="text-xl font-bold text-v4-text-muted mb-4">
+          <h3 className="text-xl font-bold text-v4-text-muted mb-4 animate-typing">
             주변 관광지 ({MAP_MARKERS.length}곳)
           </h3>
           <ul className="space-y-3">
             <li
               onClick={() => handleListItemClick(daonstayMarkerRef.current)}
-              className="flex items-center p-3 rounded-lg border border-v4-gold/50 cursor-pointer bg-v4-bg hover:bg-v4-gold/20 transition-all"
+              className="flex items-center p-3 rounded-lg border border-v4-gold/50 cursor-pointer bg-v4-surface hover:bg-v4-gold/20 transition-all"
             >
               <div className="w-10 h-10 bg-v4-gold rounded-full flex items-center justify-center text-white font-bold text-xl mr-4 flex-shrink-0">
                 ★
               </div>
               <img src={DAONSTAY_LOCATION.image} alt={DAONSTAY_LOCATION.name} className="w-20 h-20 object-cover rounded-md mr-4"/>
               <div className="flex-grow">
-                <h4 className="font-semibold text-v4-text-muted">{DAONSTAY_LOCATION.name}</h4>
+                <h4 className="font-semibold text-v4-text-muted animate-typing">{DAONSTAY_LOCATION.name}</h4>
                 <p className="text-sm text-v4-text-muted">{DAONSTAY_LOCATION.description}</p>
               </div>
             </li>
@@ -170,15 +172,15 @@ const TourInfraMapSection = () => {
               <li
                 key={marker.id}
                 onClick={() => handleListItemClick(markersRef.current[index])}
-                className="flex items-center p-3 rounded-lg border border-v4-gold/50 cursor-pointer bg-v4-bg hover:bg-v4-gold/20 transition-all"
+                className="flex items-center p-3 rounded-lg border border-v4-gold/50 cursor-pointer bg-v4-surface hover:bg-v4-gold/20 transition-all"
               >
                 <div className="w-10 h-10 bg-v4-blue rounded-full flex items-center justify-center text-white font-bold text-sm mr-4 flex-shrink-0">
                   {index + 1}
                 </div>
                 <img src={marker.image} alt={marker.name} className="w-20 h-20 object-cover rounded-md mr-4"/>
                 <div className="flex-grow">
-                  <h4 className="font-semibold text-v4-text-muted">{marker.name}</h4>
-                  <p className="text-sm text-v4-text-muted">{marker.description}</p>
+                  <h4 className="font-semibold text-v4-text-muted animate-typing">{marker.name}</h4>
+                  <p className="text-sm text-v4-text animate-typing">{marker.description}</p>
                 </div>
               </li>
             ))}

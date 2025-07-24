@@ -1,43 +1,40 @@
-/* src/styles/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-v4-bg text-v4-text;
-    font-family: "NanumSquareNeo", sans-serif;
-  }
+/* Custom styles for text stroke effect */
+.text-stroke-gold-dark {
+  -webkit-text-stroke: 1.5px #B8860B; /* Darker gold stroke */
+  text-stroke: 1.5px #B8860B;
 }
 
-@layer components {
-  /* V4용 커스텀 버튼 */
-  .btn-v4 {
-    @apply px-6 py-3 font-bold text-white bg-v4-blue rounded-lg shadow-lg transition-transform duration-300;
-  }
-  .btn-v4:hover {
-    @apply -translate-y-1 shadow-xl;
-  }
+.text-stroke-slate-light {
+  -webkit-text-stroke: 1.5px #64748B; /* Light slate stroke */
+  text-stroke: 1.5px #64748B;
 }
 
-@layer utilities {
-  .max-w-container {
-    @apply max-w-[1200px] mx-auto;
-  }
+/* Custom styles for shadow text effect */
+.shadow-text-light {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
 
-  /* 커스텀 스크롤바 */
-  .custom-scrollbar::-webkit-scrollbar {
-    width: 8px;
-  }
-  .custom-scrollbar::-webkit-scrollbar-track {
-    background: theme('colors.v4-bg');
-    border-radius: 10px;
-  }
-  .custom-scrollbar::-webkit-scrollbar-thumb {
-    background: #cbd5e1; /* slate-300 */
-    border-radius: 10px;
-  }
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background: #94a3b8; /* slate-400 */
-  }
+/* Custom styles for typing effect */
+.typing-effect span {
+  opacity: 0;
+  animation: reveal-char 0.1s steps(1) forwards;
+}
+
+/* Ensure full height for HTML and body */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
 }

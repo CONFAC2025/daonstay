@@ -21,7 +21,7 @@ const Header = () => {
           </span>
           <h1 className="text-[24px] font-bold">
             <span className="sr-only">홈페이지 제목: </span>
-            POOL VILLA 다온스테이
+            POOL VILLA 펜션
           </h1>
         </a>
         <nav>

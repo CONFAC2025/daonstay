@@ -1,6 +1,7 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { useRecentApplicants } from "../../hooks/useRecentApplicants";
+import useTypingEffect from "../../hooks/useTypingEffect.tsx";
 import {
   formatPhoneNumber,
   GOOGLE_SHEET_SCRIPT_URL,
@@ -41,11 +42,11 @@ const FormSection = () => {
     <section id="form-section" className="py-16 md:py-24 bg-v4-bg">
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text mb-4">
-            지금 바로 <span className="text-v4-gold">투자 상담 신청</span>
+          <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text mb-4">
+            {useTypingEffect("지금 바로 ", 50)}<span className="text-v4-gold">{useTypingEffect("투자 상담 신청", 50)}</span>
           </h2>
-          <p className="text-lg md:text-xl text-v4-text-muted">
-            전문가의 상세한 상담을 통해 확신을 얻으세요.
+          <p className="text-lg md:text-xl text-v4-text-muted animate-heartbeat">
+            {useTypingEffect("전문가의 상세한 상담을 통해 확신을 얻으세요.", 30)}
           </p>
         </div>
 
@@ -89,13 +90,6 @@ const FormSection = () => {
               >
                 {isSubmitting ? "제출 중..." : "상담 신청하기"}
               </button>
-              <button
-                type="button"
-                onClick={() => (window.location.href = "tel:1811-1854")}
-                className="w-full px-8 py-4 bg-transparent border-2 border-v4-blue text-v4-blue rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 hover:bg-v4-blue hover:text-white"
-              >
-                전화 바로걸기
-              </button>
             </div>
           </form>
         </div>
@@ -127,7 +121,7 @@ const InputField = ({
 }: InputFieldProps) => {
   return (
     <fieldset>
-      <label htmlFor={name} className="block text-sm font-medium text-v4-text-muted mb-2">
+      <label htmlFor={name} className="block text-sm font-medium text-v4-text-muted mb-2 animate-typing">
         {label}
       </label>
       <input
@@ -136,7 +130,7 @@ const InputField = ({
         placeholder={placeholder}
         maxLength={maxLength}
         className={`w-full px-4 py-3 border-2 bg-v4-bg rounded-lg focus:outline-none focus:ring-2 focus:ring-v4-gold text-v4-text ${
-          error ? "border-red-500" : "border-black/10"
+          error ? "border-red-500" : "border-white/10"
         }`}
         {...register}
       />

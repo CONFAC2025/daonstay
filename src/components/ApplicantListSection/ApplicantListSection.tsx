@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRecentApplicants } from "../../hooks/useRecentApplicants";
+import useTypingEffect from "../../hooks/useTypingEffect.tsx";
 
 const columns = [
   { key: "이름" as const, label: "이름" },
@@ -33,21 +34,21 @@ const ApplicantListSection = () => {
     <section className="py-16 md:py-24 bg-v4-bg">
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text mb-4">
-            실시간 <span className="text-v4-gold">투자 상담 신청</span> 현황
+          <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text mb-4">
+            {useTypingEffect("실시간 ", 50)}<span className="text-v4-gold">{useTypingEffect("투자 상담 신청 현황", 50)}</span>
           </h2>
           <p className="text-lg md:text-xl text-v4-text-muted">
-            많은 분들이 다온스테이의 미래 가치를 알아보고 있습니다.
+            {useTypingEffect("많은 분들이 다온스테이의 미래 가치를 알아보고 있습니다.", 30)}
           </p>
         </div>
 
-        <div className="h-96 overflow-hidden relative rounded-xl border-2 border-black/10 bg-v4-surface shadow-lg">
+        <div className="h-96 overflow-hidden relative rounded-xl border-2 border-black/10 bg-v4-surface shadow-lg overflow-x-auto">
           <div className="animate-marquee-vertical">
             <table className="w-full text-left border-collapse">
               <thead>
                 <tr>
                   {columns.map((col) => (
-                    <th key={String(col.key)} className="sticky top-0 p-4 bg-v4-surface text-v4-text-muted font-semibold z-10 border-b-2 border-black/10">
+                    <th key={String(col.key)} className="sticky top-0 p-4 bg-v4-surface text-v4-text-muted font-semibold z-10 border-b-2 border-black/10 animate-typing">
                       {col.label}
                     </th>
                   ))}
@@ -55,9 +56,9 @@ const ApplicantListSection = () => {
               </thead>
               <tbody>
                 {maskedRows.map((row, rowIndex) => (
-                  <tr key={rowIndex} className="border-b border-black/10">
+                  <tr key={rowIndex} className="border-b border-white/10">
                     {columns.map((col) => (
-                      <td key={String(col.key)} className="p-4 whitespace-nowrap text-v4-text">
+                      <td key={String(col.key)} className="p-4 whitespace-nowrap text-v4-text animate-typing">
                         {row[col.key] as React.ReactNode}
                       </td>
                     ))}

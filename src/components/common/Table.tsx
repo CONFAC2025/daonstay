@@ -9,7 +9,7 @@ export const Table = <T extends object>({ columns, rows }: TableProps<T>) => {
       <thead>
         <tr>
           {columns.map((col) => (
-            <th key={String(col.key)} className="p-3 md:p-4 text-sm md:text-base bg-secondary-gray-100 text-secondary-gray-800 font-semibold border-b-2 border-secondary-gray-200 text-center">
+            <th key={String(col.key)} className="p-3 md:p-4 text-sm md:text-base bg-v4-surface text-v4-text-muted font-semibold border-b-2 border-white/10 text-center">
               {col.label}
             </th>
           ))}
@@ -19,7 +19,7 @@ export const Table = <T extends object>({ columns, rows }: TableProps<T>) => {
         {rows.map((row, rowIndex) => (
           <tr key={rowIndex} className="border-b border-secondary-gray-200">
             {columns.map((col) => (
-              <td key={String(col.key)} className="p-3 md:p-4 text-sm md:text-base text-secondary-gray-800 text-center">
+              <td key={String(col.key)} className="p-3 md:p-4 text-sm md:text-base text-v4-text text-center">
                 {row[col.key] as React.ReactNode}
               </td>
             ))}

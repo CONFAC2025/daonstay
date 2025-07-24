@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import "swiper/css/pagination";
 import { GALLERY_IMAGES } from "./constant";
+import useTypingEffect from "../../hooks/useTypingEffect.tsx";
 
 const GallerySection = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
@@ -16,15 +17,15 @@ const GallerySection = () => {
     <section className="py-16 md:py-24 bg-v4-bg">
       <div className="max-w-container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text mb-4">
-            꿈꾸던 공간, <span className="text-v4-gold">다온스테이 갤러리</span>
+          <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text mb-4 animate-typing">
+            {useTypingEffect("꿈꾸던 공간, ", 50)}<span className="text-v4-gold">{useTypingEffect("다온스테이 갤러리", 50)}</span>
           </h2>
-          <p className="text-lg md:text-xl text-v4-text-muted">
-            최고급 자재와 감각적인 디자인으로 완성된 공간을 만나보세요.
+          <p className="text-lg md:text-xl text-v4-text-muted animate-typing">
+            {useTypingEffect("최고급 자재와 감각적인 디자인으로 완성된 공간을 만나보세요.", 30)}
           </p>
         </div>
 
-        <div className="relative mb-4 md:mb-6 border-2 border-black/10 rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-xl">
+        <div className="relative mb-4 md:mb-6 border-2 border-white/10 rounded-2xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-xl">
           <Swiper
             loop={true}
             spaceBetween={10}
@@ -33,13 +34,14 @@ const GallerySection = () => {
             modules={[Navigation, Thumbs, Autoplay]}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             className="aspect-video"
+            effect="fade"
           >
             {GALLERY_IMAGES.map((img, idx) => (
               <SwiperSlide key={idx}>
                 <img
                   src={img}
                   alt={`gallery-main-${idx}`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-1000 ease-out hover:scale-110"
                 />
               </SwiperSlide>
             ))}
