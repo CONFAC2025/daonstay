@@ -14,9 +14,9 @@ const Card = ({ image, title, description, style }: { image: string; title: stri
 const GrowthPotentialSection = () => {
   return (
     <section className="section-padding bg-v4-bg">
-      <div className="max-w-container mx-auto px-4 sm:px-6">
+      <div className="max-w-container mx-auto px-6 sm:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text mb-4">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text mb-4">
             <span className="text-v4-gold">{useTypingEffect("풍부한 관광 인프라는", 50)}</span><br />{useTypingEffect("안정적인 수익을 보장합니다", 50)}
           </h2>
           <p className="text-lg md:text-xl text-v4-text max-w-3xl mx-auto">

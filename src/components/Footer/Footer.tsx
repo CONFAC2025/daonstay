@@ -3,7 +3,7 @@ import useTypingEffect from "../../hooks/useTypingEffect.tsx";
 const Footer = () => {
   return (
     <footer className="bg-v4-surface text-v4-text-muted py-8 border-t border-white/10">
-      <div className="max-w-container mx-auto px-4 sm:px-6 text-center text-sm">
+      <div className="max-w-container mx-auto px-6 sm:px-8 text-center text-sm">
         <p className="mb-2">
           <strong>(주)다온종합건설</strong> | 대표: 김대룡 | 사업자등록번호: 226-81-15260
         </p>

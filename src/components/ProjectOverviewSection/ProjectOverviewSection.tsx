@@ -11,10 +11,10 @@ const InfoItem = ({ label, value }: { label: string; value: string; }) => (
 const ProjectOverviewSection = () => {
   return (
     <section className="py-16 md:py-24 bg-v4-bg">
-      <div className="max-w-container mx-auto px-4 sm:px-6">
+      <div className="max-w-container mx-auto px-6 sm:px-8">
         <div className="grid grid-cols-1 gap-12 items-center">
           <div className="text-center">
-            <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text-muted mb-6 whitespace-nowrap">
+            <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text-muted mb-6">
               {useTypingEffect("프로젝트 ", 50)}<span className="text-v4-gold">{useTypingEffect("개요", 50)}</span>
             </h2>
             <p className="text-lg md:text-xl text-v4-text-muted mb-8 animate-typing">

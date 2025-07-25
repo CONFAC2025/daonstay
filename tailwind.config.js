@@ -15,6 +15,9 @@ export default {
         'v4-gold': '#FFD700',         // 강조색 (밝은 금색)
         'v4-blue': '#3b82f6',         // 보조 강조색 (밝은 파란색)
       },
+      maxWidth: {
+        container: '1280px',
+      },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif'],
       },

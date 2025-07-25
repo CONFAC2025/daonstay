@@ -3,9 +3,9 @@ import useTypingEffect from "../../hooks/useTypingEffect.tsx";
 const VideoSection = () => {
   return (
     <section className="py-16 md:py-24 bg-v4-surface">
-      <div className="max-w-container mx-auto px-4 sm:px-6">
+      <div className="max-w-container mx-auto px-6 sm:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text mb-4">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text mb-4">
             <span className="text-v4-gold">{useTypingEffect("따라올 수 없는", 50)}</span><br />{useTypingEffect("투자수익을 만나보세요", 50)}
           </h2>
           <p className="text-lg md:text-xl text-v4-text-muted">

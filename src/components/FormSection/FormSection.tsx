@@ -40,9 +40,9 @@ const FormSection = () => {
 
   return (
     <section id="form-section" className="py-16 md:py-24 bg-v4-bg">
-      <div className="max-w-container mx-auto px-4 sm:px-6">
+      <div className="max-w-container mx-auto px-6 sm:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text mb-4">
+          <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text mb-4">
             {useTypingEffect("지금 바로 ", 50)}<span className="text-v4-gold">{useTypingEffect("투자 상담 신청", 50)}</span>
           </h2>
           <p className="text-lg md:text-xl text-v4-text-muted animate-heartbeat">
@@ -86,7 +86,7 @@ const FormSection = () => {
               <button
                 type="submit"
                 disabled={isSubmitting || !isValid}
-                className="w-full btn-v4"
+                className="w-full btn-v4 text-white"
               >
                 {isSubmitting ? "제출 중..." : "상담 신청하기"}
               </button>
