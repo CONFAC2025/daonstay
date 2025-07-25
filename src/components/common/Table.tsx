@@ -9,7 +9,7 @@ export const Table = <T extends object>({ columns, rows }: TableProps<T>) => {
       <thead>
         <tr>
           {columns.map((col) => (
-            <th key={String(col.key)} className="p-3 md:p-4 text-sm md:text-base bg-v4-surface text-v4-text-muted font-semibold border-b-2 border-white/10 text-center">
+            <th key={String(col.key)} className="sticky top-0 p-3 md:p-4 text-sm md:text-base bg-v4-surface text-v4-text-muted font-semibold border-b-2 border-white/10 text-center">
               {col.label}
             </th>
           ))}

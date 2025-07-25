@@ -40,7 +40,7 @@ const TouristStatsSection = () => {
       <div className="max-w-container mx-auto px-6 sm:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text-muted mb-4">
-            <span className="text-v4-gold">{useTypingEffect("동해시 관광객으로 넘쳐나는", 50)}</span><br />{useTypingEffect("숙박수요를 기대하세요!", 50)}
+            <span className="text-v4-gold">{useTypingEffect("관광객으로 넘쳐나는", 50)}</span><br />{useTypingEffect("숙박수요를 기대하세요!", 50)}
           </h2>
           <p className="text-lg md:text-xl text-v4-text">
             {useTypingEffect("안정적인 투자 수익을 위한 핵심 지표를 확인하세요.", 30)}

@@ -43,7 +43,7 @@ const FormSection = () => {
       <div className="max-w-container mx-auto px-6 sm:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text mb-4">
-            {useTypingEffect("지금 바로 ", 50)}<span className="text-v4-gold">{useTypingEffect("투자 상담 신청", 50)}</span>
+            {useTypingEffect("지금 바로 ", 50)}<span className="text-v4-gold">{useTypingEffect("분양상담 신청", 50)}</span>
           </h2>
           <p className="text-lg md:text-xl text-v4-text-muted animate-heartbeat">
             {useTypingEffect("전문가의 상세한 상담을 통해 확신을 얻으세요.", 30)}

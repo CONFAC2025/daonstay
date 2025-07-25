@@ -18,19 +18,18 @@ const ROIAnalysisSection = () => {
   const incomeCount2 = useCountUp(incomeRef2, 3171, 2000);
   const roiCount2 = useCountUp(roiRef2, 20, 2000);
 
-  const h2Text = "수익률 시뮬레이션 (예상치)";
+  const h2Text = "수익률 시뮬레이션";
   const pText = "투명하고 안정적인 수익률을 숫자로 확인하세요.";
-  const h4Text = "수익률 상세 분석 (2개 시나리오)";
+  
 
   const animatedH2 = useTypingEffect(h2Text, 50);
   const animatedP = useTypingEffect(pText, 30);
-  const animatedH4 = useTypingEffect(h4Text, 50);
 
   return (
     <section className="py-16 md:py-24 bg-v4-bg">
       <div className="max-w-container mx-auto px-6 sm:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-extrabold text-v4-text-muted mb-4">
+          <h2 className="text-4xl md:text-6xl font-extrabold text-v4-text-muted mb-4">
             <span className="text-v4-gold">{animatedH2}</span>
           </h2>
           <p className="text-lg md:text-xl text-v4-text-muted">
@@ -87,7 +86,7 @@ const ROIAnalysisSection = () => {
 
         <div className="bg-v4-surface p-4 md:p-8 rounded-xl shadow-lg border border-black/10 transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
           <h4 className="text-2xl font-bold text-center mb-6 text-v4-gold">
-            {animatedH4}
+            {useTypingEffect("수익률 상세 분석", 50)}<br />{useTypingEffect("가동률 조건 시나리오", 50)}
           </h4>
           <div className="overflow-x-auto">
             <Table

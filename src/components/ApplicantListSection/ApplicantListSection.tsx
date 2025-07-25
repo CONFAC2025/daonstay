@@ -58,7 +58,7 @@ const ApplicantListSection = () => {
                 {maskedRows.map((row, rowIndex) => (
                   <tr key={rowIndex} className="border-b border-white/10">
                     {columns.map((col) => (
-                      <td key={String(col.key)} className="p-4 whitespace-nowrap text-v4-text animate-typing">
+                      <td key={String(col.key)} className="p-4 text-v4-text animate-typing">
                         {row[col.key] as React.ReactNode}
                       </td>
                     ))}

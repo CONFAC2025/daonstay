@@ -4,12 +4,7 @@ const Footer = () => {
   return (
     <footer className="bg-v4-surface text-v4-text-muted py-8 border-t border-white/10">
       <div className="max-w-container mx-auto px-6 sm:px-8 text-center text-sm">
-        <p className="mb-2">
-          <strong>(주)다온종합건설</strong> | 대표: 김대룡 | 사업자등록번호: 226-81-15260
-        </p>
-        <p className="mb-2">
-          주소: 강원특별자치도 동해시 대진1길 49-11 (대진동)
-        </p>
+        
         <p className="mb-4">
           상담문의: <a href="tel:1811-1854" className="font-extrabold text-v4-gold text-3xl md:text-4xl">{useTypingEffect("1811-1854", 50)}</a>
         </p>
