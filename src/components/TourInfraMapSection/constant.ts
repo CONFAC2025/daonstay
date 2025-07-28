@@ -101,6 +101,22 @@ export const MAP_MARKERS = [
     description: "신선이 노닐었다는 전설처럼 비경을 자랑하는 국민 명승지입니다. 두타산과 청옥산을 배경으로 용추폭포, 쌍폭포 등 수많은 폭포와 넓은 무릉반석이 장관을 이룹니다.",
     image: `/images/tourist-spot/MUREUNG_VALLEY_PLACEHOLDER.jpg`,
   },
+  {
+    id: 14,
+    name: "도째비골 해랑 전망대",
+    lat: 37.555500,
+    lng: 129.119500,
+    description: "동해의 푸른 바다를 한눈에 담을 수 있는 최고의 전망 포인트입니다. 탁 트인 전망과 함께 일출과 일몰의 장관을 감상할 수 있어 많은 관광객들이 찾는 명소입니다.",
+    image: `/images/tourist-spot/DOJJAEBIGOL_VIEW.jpg`,
+  },
+  {
+    id: 15,
+    name: "무릉별유천지",
+    lat: 37.465000,
+    lng: 129.103000,
+    description: "무릉계곡의 숨은 비경으로, 별천지라 불릴 만큼 아름다운 자연경관을 자랑합니다. 맑은 계곡물과 기암괴석이 어우러져 신선이 노닐 듯한 선경을 연출합니다.",
+    image: `/images/tourist-spot/MOOREUNG_YUBYUL.jpg`,
+  },
 ];
 
 export const MARKER_SVG_PATH =
